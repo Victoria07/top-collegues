@@ -1,0 +1,28 @@
+<h1 class="titre">Ajouter un nouveau collègue</h1>
+<div class="formulaire">
+  <mat-form-field appearance="fill">
+    <mat-label>Votre pseudo</mat-label>
+    <input [formControl]="pseudo" matInput placeholder="pseudo" required>
+    <mat-error *ngIf="pseudo.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Nom</mat-label>
+    <input [formControl]="nom" matInput placeholder="Nom" required>
+    <mat-error *ngIf="nom.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Prénom</mat-label>
+    <input [formControl]="prenom" matInput placeholder="Prénom" required>
+    <mat-error *ngIf="prenom.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <mat-form-field appearance="fill">
+    <mat-label>Image</mat-label>
+    <input [formControl]="image" matInput placeholder="Image" required>
+    <mat-error *ngIf="image.invalid">{{getErrorMessage()}}</mat-error>
+  </mat-form-field>
+
+  <button disabled mat-flat-button type="submit"> Ajouter</button>
+</div>

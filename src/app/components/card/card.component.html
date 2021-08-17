@@ -1,0 +1,68 @@
+<p>
+  <mat-toolbar>
+    <span id="titre">My Application</span>
+  </mat-toolbar>
+</p>
+
+<p>
+  <mat-toolbar>
+    <button aria-label="Example icon-button with menu icon" class="example-icon" mat-icon-button>
+      <mat-icon>menu</mat-icon>
+    </button>
+    <span>My App de collègues </span>
+    <span class="example-spacer"></span>
+    <button aria-label="Example icon-button with heart icon" class="example-icon favorite-icon" mat-icon-button>
+      <mat-icon>favorite</mat-icon>
+    </button>
+    <button aria-label="Example icon-button with share icon" class="example-icon" mat-icon-button>
+      <mat-icon>share</mat-icon>
+    </button>
+  </mat-toolbar>
+</p>
+
+<div class="main">
+  <mat-card *ngFor="let collegue of collegues" class="mat-card">
+    <!-- Div remplacée par une mat-card: on utilise pas une div pour les mat card, et la mat card englobe tout ce qui concerne la card
+    c'est à dire : header, footer, contente(texte en dessous) et image  -->
+    <mat-card-header>
+      <mat-card-title>{{collegue.id}} </mat-card-title>
+      <mat-card-subtitle> {{collegue.nom}} {{collegue.prenom}} </mat-card-subtitle>
+    </mat-card-header>
+    <img alt="photo d'un réseau internet" mat-card-image src="{{collegue.photo}}"/>
+    <mat-card-content>
+      <p>
+        The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
+        A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
+        bred for hunting.
+      </p>
+    </mat-card-content>
+    <mat-card-footer>
+      <section>
+        <div class="example-label"></div>
+        <div class="example-button-row">
+          <button color="primary" mat-flat-button>
+            <mat-icon>favorite</mat-icon>
+            J'aime
+          </button>
+          <button color="accent" mat-flat-button> Je n'aime pas</button>
+          <a color="blue" href="https://www.linkedin.com/in/victoria-iber-47165512a/" mat-flat-button target="_blank">
+            Profil Linkedin
+          </a>
+        </div>
+      </section>
+    </mat-card-footer>
+  </mat-card>
+</div>
+
+<div>
+  <div class="example-label"></div>
+  <div class="example-button-row">
+    <button mat-flat-button>Afficher tous les collègues</button>
+    <button mat-flat-button> Ajouter un collègue</button>
+    <a href="" mat-flat-button> Ajouter </a>
+    <button mat-flat-button> Modifier un collègue</button>
+    <button color="warn" mat-flat-button> Supprimer un collègue</button>
+    <button disabled mat-flat-button>BoutonVideBonsoir</button>
+    <a href="https://www.google.com/" mat-flat-button target="_blank"> Rechercher </a>
+  </div>
+</div>
